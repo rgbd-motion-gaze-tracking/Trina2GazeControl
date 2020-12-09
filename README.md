@@ -15,7 +15,7 @@ Instructions for installation and use:
 
 5. git clone this repository into /catkin_ws/src/TRINA-WPI-2.0/trina2_control/src
 
-6. return your cmd directory to catkin_ws to launch and run this. You will need 4 command windows.
+6. return your cmd directory to /catkin_ws to launch and run this. You will need 4 command windows.
 
 7. `roslaunch trina2_gazebo trina2.launch`
 

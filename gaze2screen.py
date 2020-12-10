@@ -1,4 +1,7 @@
 """
+Author: Karim Tarabein
+Last Update: 12/09/2020
+
 import and use function Gcontrol(gaze,webcam). If you want to use for continuous
 gaze tracking place Gcontrol in a loop
 
@@ -84,16 +87,16 @@ def Gcontrol(gaze,webcam):
 
 
         #smooth the gaze tracking by limiting step size to radius of circle R
-        if not gaze.is_blinking():
-            if (XX-XXold) >  R: #check to see if gaze point fasls outside of circle
-                XX = XX + R
-            elif (XXold-XX) >  R:
-                 XX = XX - R
-
-            if (YY-YYold) >  R: #check to see if gaze point fasls outside of circle
-                YY = YY + R
-            elif (YYold-YY) >  R:
-                YY = YY - R
+       if not gaze.is_blinking():
+#            if (XX-XXold) >  R: #check to see if gaze point fasls outside of circle
+#                XX = XX + R
+#            elif (XXold-XX) >  R:
+#                 XX = XX - R
+#
+#            if (YY-YYold) >  R: #check to see if gaze point fasls outside of circle
+#                YY = YY + R
+#            elif (YYold-YY) >  R:
+#                YY = YY - R
             #insert the circle in the frame
             cv2.circle(frame, center=(XX,YY), radius=R, color=(255,255,0), thickness= -1)
 
@@ -122,7 +125,7 @@ def Gcontrol(gaze,webcam):
         """
         Everything between here and next quote comment out is antoine lames code
 
-        Uncomment line 138  cv.imshow("Demo",frame) if you want to demo outside
+        Uncomment line 141  cv.imshow("Demo",frame) if you want to demo outside
         ROS and see the image
 
         """
